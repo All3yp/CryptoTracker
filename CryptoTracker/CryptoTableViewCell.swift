@@ -7,37 +7,14 @@
 
 import UIKit
 
-class CryptoTableViewCellViewModel {
-    let name: String
-    let symbol: String
-    let price: String
-    let iconURL: URL?
-    var iconData: Data?
-
-    init(
-        name: String,
-        symbol: String,
-        price: String,
-        iconURL: URL?
-//        iconData: Data,
-    ) {
-        self.name = name
-        self.symbol = symbol
-        self.price = price
-        self.iconURL = iconURL
-//        self.iconData = iconData
-    }
-}
-
 class CryptoTableViewCell: UITableViewCell {
 
     static let identifier = "CryptoTableViewCell"
 
     // MARK: Subviews
-
     private let iconImageView: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         return image
     }()
 
@@ -108,11 +85,11 @@ class CryptoTableViewCell: UITableViewCell {
     }
 
     override func prepareForReuse() {
-        super.prepareForReuse()
         iconImageView.image = nil
         nameLabel.text = nil
         symbolLabel.text = nil
         priceLabel.text = nil
+        super.prepareForReuse()
 
     }
 

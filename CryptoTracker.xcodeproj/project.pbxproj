@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18059ACB26455D420000FC5B /* Int+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18059ACA26455D420000FC5B /* Int+Extenstion.swift */; };
+		18059ACD2645BC260000FC5B /* CryptoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18059ACC2645BC260000FC5B /* CryptoTableViewCellViewModel.swift */; };
 		18E18B3D26443CB100AFDD64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E18B3C26443CB100AFDD64 /* AppDelegate.swift */; };
 		18E18B3F26443CB100AFDD64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E18B3E26443CB100AFDD64 /* SceneDelegate.swift */; };
 		18E18B4126443CB100AFDD64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E18B4026443CB100AFDD64 /* ViewController.swift */; };
-		18E18B4426443CB100AFDD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E18B4226443CB100AFDD64 /* Main.storyboard */; };
 		18E18B4626443CB400AFDD64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E18B4526443CB400AFDD64 /* Assets.xcassets */; };
 		18E18B4926443CB400AFDD64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E18B4726443CB400AFDD64 /* LaunchScreen.storyboard */; };
 		18E18B512644459300AFDD64 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E18B502644459300AFDD64 /* APICaller.swift */; };
@@ -19,11 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18059ACA26455D420000FC5B /* Int+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extenstion.swift"; sourceTree = "<group>"; };
+		18059ACC2645BC260000FC5B /* CryptoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		18E18B3926443CB100AFDD64 /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E18B3C26443CB100AFDD64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E18B3E26443CB100AFDD64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18E18B4026443CB100AFDD64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18E18B4326443CB100AFDD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18E18B4526443CB400AFDD64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E18B4826443CB400AFDD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E18B4A26443CB400AFDD64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,8 +69,9 @@
 				18E18B4026443CB100AFDD64 /* ViewController.swift */,
 				18E18B542644870700AFDD64 /* Models.swift */,
 				18E18B5226447F2100AFDD64 /* CryptoTableViewCell.swift */,
+				18059ACC2645BC260000FC5B /* CryptoTableViewCellViewModel.swift */,
 				18E18B502644459300AFDD64 /* APICaller.swift */,
-				18E18B4226443CB100AFDD64 /* Main.storyboard */,
+				18059ACA26455D420000FC5B /* Int+Extenstion.swift */,
 				18E18B4526443CB400AFDD64 /* Assets.xcassets */,
 				18E18B4726443CB400AFDD64 /* LaunchScreen.storyboard */,
 				18E18B4A26443CB400AFDD64 /* Info.plist */,
@@ -135,7 +138,6 @@
 			files = (
 				18E18B4926443CB400AFDD64 /* LaunchScreen.storyboard in Resources */,
 				18E18B4626443CB400AFDD64 /* Assets.xcassets in Resources */,
-				18E18B4426443CB100AFDD64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,25 +149,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E18B4126443CB100AFDD64 /* ViewController.swift in Sources */,
+				18059ACD2645BC260000FC5B /* CryptoTableViewCellViewModel.swift in Sources */,
 				18E18B3D26443CB100AFDD64 /* AppDelegate.swift in Sources */,
 				18E18B3F26443CB100AFDD64 /* SceneDelegate.swift in Sources */,
 				18E18B552644870700AFDD64 /* Models.swift in Sources */,
 				18E18B5326447F2100AFDD64 /* CryptoTableViewCell.swift in Sources */,
 				18E18B512644459300AFDD64 /* APICaller.swift in Sources */,
+				18059ACB26455D420000FC5B /* Int+Extenstion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18E18B4226443CB100AFDD64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18E18B4326443CB100AFDD64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18E18B4726443CB400AFDD64 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

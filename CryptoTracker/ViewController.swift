@@ -6,59 +6,51 @@
 //
 
 import UIKit
-//APi caller
-// UI to show different cryptos
-// MVVM
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    private let tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = .white
+        tableView.allowsSelection = false
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(CryptoTableViewCell.self, forCellReuseIdentifier: "CryptoTableViewCell")
         return tableView
     }()
 
     private var viewModels = [CryptoTableViewCellViewModel]()
 
-    static let numberFormatter: NumberFormatter = {
-        let formater = NumberFormatter()
-        formater.locale = .current //Locale.init(identifier: "pt_br")
-        formater.allowsFloats = true
-        formater.numberStyle = .currency
-        formater.formatterBehavior = .default
-        return formater
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addSubview(tableView)
-        tableView.allowsSelection = false
 
+        navigationController?.navigationBar.prefersLargeTitles = true
         title = "Crypto Tracker"
-
-        tableView.delegate = self
-        tableView.dataSource = self
 
         APICaller.shared.getAllCryptoData { [weak self] result in
             switch result {
             case .success(let models):
                 self?.viewModels = models.compactMap({ model in
 
-                    let price = model.price_usd ?? 0
-                    let formater = ViewController.numberFormatter
-                    let priceString = formater.string(from: NSNumber(value: price))
+                    guard let price_usd = model.price_usd else { return nil }
+                    guard model.id_icon != nil else { return nil }
+
+                    let price: Int = Int(price_usd)
+
+                    let priceString = price.formatUsingAbbrevation()
 
                     let iconURL = URL(string:
                                         APICaller.shared.icons.filter({ icon in
-                                            icon.asset_id == icon.asset_id
+                                            icon.asset_id == model.asset_id
                                         }).first?.url ?? ""
                     )
 
                     return CryptoTableViewCellViewModel(
-                        name: model.name ?? "N/A",
+                        name: model.name ?? model.asset_id.capitalized,
                         symbol: model.asset_id,
-                        price: priceString ?? "N/A",
+                        price: "$\(priceString)",
                         iconURL: iconURL
                     )
 
