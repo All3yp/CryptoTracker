@@ -1,5 +1,7 @@
 # Cryptocurrent tracker in tableView with MVVM
 <br/>
-### Screenshot
+
+## Screenshot
 <br/>
+
 <img src="screenshot.png" width="400" />
